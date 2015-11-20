@@ -1,0 +1,475 @@
+@import 'mixins.less';
+@import 'fonts.less';
+
+/**
+*
+* General Classes
+*
+**/
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f2f2f2;
+}
+.parallax-container {
+  height: 300px;
+}
+.parallax {
+  z-index: 0;
+
+  img {
+    height: auto;
+  }
+}
+.no-margin {
+  margin: 0 !important;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.btn, .btn-floating, .btn-large, .card, .card-panel, .collapsible, .dropdown-content, .side-nav, .toast, .z-depth-1, nav {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
+}
+
+
+/**
+*
+* Typography
+*
+**/
+.skinny {
+  font-weight: 300;
+}
+.superlight {
+  font-size: 85%;
+  color: #999;
+}
+.title-section {
+  font-weight: 300;
+  color: @color-00;
+  margin: 30px 0 15px;
+
+  a {
+    color: @color-00;
+  }
+}
+button.prefix {
+  background: none;
+  border: none;
+}
+label.active {
+  color: #fff !important;
+}
+input[type="date"]:focus:not([readonly]), input[type="datetime-local"]:focus:not([readonly]), input[type="email"]:focus:not([readonly]), input[type="number"]:focus:not([readonly]), input[type="password"]:focus:not([readonly]), input[type="search"]:focus:not([readonly]), input[type="tel"]:focus:not([readonly]), input[type="text"]:focus:not([readonly]), input[type="time"]:focus:not([readonly]), input[type="url"]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #fff !important;
+  box-shadow: 0px 1px 0px 0px #fff !important;
+}
+a {
+  color: @color-04;
+}
+
+
+/**
+*
+* Header
+*
+**/
+.main-header {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-top: 9%;
+  color: #fff;
+
+  .parallax-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+
+    .parallax {
+      img {
+        bottom: 59px;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// Main navigation
+nav {
+  background: none;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+
+
+  ul {
+    li {
+      border-bottom: solid 3px transparent;
+
+      a {
+        font-size: 14px;
+      }
+
+      &:hover, &.current-menu-item, &.current-post-ancestor, &.current-menu-parent, &.current-post-parent {
+        border-color: @color-02;
+      }
+    }
+  }
+}
+
+// Menu mobile toggle
+.button-collapse {
+  background: @color-00;
+  color: #fff;
+  padding: 5px 20px;
+  border: none;
+  font-size: 30px;
+  float: right;
+}
+
+// Search form
+.search-form {
+  label {
+    color: #fff;
+  }
+}
+
+
+/**
+*
+* Grid list
+*
+**/
+.grid-list {}
+.grid-sizer, .grid-item {
+  width: 33.333%;
+  padding: 0px 0.75rem;
+
+  @media (max-width: 992px) {
+    width: 50%;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+.grid-list-home {
+  .grid-sizer, .grid-item {
+    width: 50%;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+}
+
+
+
+/**
+*
+* Footer
+*
+**/
+.main-footer {
+  width: 100%;
+
+}
+.social-links {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    font-size: 20px;
+
+    a {
+      display: block;
+      color: lighten(@color-00, 30%);
+      padding: 5px;
+      margin: 5px;
+
+      &:hover {
+        color: @color-00;
+      }
+    }
+  }
+}
+
+
+
+/**
+*
+* Comunity
+*
+**/
+.comunity-list {}
+.comunity-item {
+  .rounded(50%);
+  overflow: hidden;
+  margin-bottom: 30px;
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.waves-holder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  .rounded(50%);
+}
+
+
+
+
+
+
+
+/**
+*
+* Jobs
+*
+**/
+.job-item {
+  border-left: solid 4px @color-03;
+  margin-bottom: 30px;
+  clear: both;
+
+  a {
+    color: @color-00;
+  }
+}
+
+
+
+/**
+*
+* Newsletter
+*
+**/
+.newsletter-form {
+  background: @color-02;
+  color: #fff;
+
+  label {
+    color: #fff !important;
+  }
+  input {
+    border-bottom: 1px solid #fff !important;
+  }
+}
+
+/**
+*
+* Events
+*
+**/
+.tribe-events-sub-nav, .tribe-events-header {
+  a {
+    color: @color-01;
+  }
+}
+.tribe-bar-date-filter {
+  background: @color-00;
+  padding: 20px !important;
+}
+.tribe-events-calendar {
+  border: none !important;
+  background: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
+
+  thead {
+    border: none !important;
+
+    tr {
+      border: none !important;
+    }
+    th {
+      padding: 30px 0;
+      color: @color-00;
+      background: @color-01;
+      color: #fff;
+      border: none !important;
+      .rounded(0);
+    }
+  }
+  tbody {
+    tr {}
+    td {
+      border: none !important;
+
+      a {
+        color: @color-00;
+      }
+
+      div[id*="tribe-events-daynum-"] {
+        padding: 10px;
+      }
+    }
+  }
+}
+.tribe-events-tooltip {
+  border: none  !important;
+  box-shadow: 0px 12px 15px 0px rgba(0, 0, 0, 0.24), 0px 17px 50px 0px rgba(0, 0, 0, 0.19)  !important;
+  background: #fff  !important;
+
+  .tribe-events-arrow {
+    border: none !important;
+  }
+
+  .entry-title {
+    background: @color-00 !important;
+    padding: 10px 20px !important;
+  }
+  .tribe-events-event-body {
+    padding: 10px 20px !important;
+  }
+
+  .tribe-events-event-thumb {
+    width: 100%;
+    img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
+}
+
+
+
+/**
+*
+* Pages
+*
+**/
+.page-title {
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding: 10px 0;
+}
+.chip {
+  background: @color-00;
+  a {
+    color: #fff;
+  }
+}
+.pagination {
+  width: 100%;
+  clear: both;
+  text-align: center;
+
+  .page-numbers {
+    display: inline-block;
+    padding: 5px 10px;
+  }
+
+  .current {
+    background: @color-00;
+    color: #fff;
+  }
+
+  a {
+    color: @color-00;
+  }
+}
+
+
+
+/**
+*
+* Home
+*
+**/
+.featured-events {}
+.featured-events-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    &:not(:first-child) {
+      border-top: solid 1px #eee;
+    }
+  }
+}
+.featured-events-item {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  clear: both;
+
+  a {
+    padding: 0;
+    margin: 0;
+  }
+
+  .event-thumb {
+    background: @color-01;
+    height: 112px;
+    text-align: center;
+    padding: 30px 0;
+  }
+  .event-body {}
+  .event-links {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+
+    a {
+      color: @color-00;
+    }
+  }
+}
+
+
+
+/**
+*
+* Forms / Formidable
+*
+**/
+fieldset {
+  border: none;
+
+  input[type="date"]:focus:not([readonly]), input[type="datetime-local"]:focus:not([readonly]), input[type="email"]:focus:not([readonly]), input[type="number"]:focus:not([readonly]), input[type="password"]:focus:not([readonly]), input[type="search"]:focus:not([readonly]), input[type="tel"]:focus:not([readonly]), input[type="text"]:focus:not([readonly]), input[type="time"]:focus:not([readonly]), input[type="url"]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid @color-02 !important;
+    box-shadow: 0px 1px 0px 0px @color-02 !important;
+  }
+
+  label.active {
+    color: @color-02 !important;
+  }
+}
+.frm_error {
+  display: none;
+}
+.frm_blank_field {
+  input[type="date"], input[type="datetime-local"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], textarea.materialize-textarea {
+    border-bottom: 1px solid @color-03 !important;
+    box-shadow: 0px 1px 0px 0px @color-03 !important;
+  }
+
+  label {
+    color: @color-03 !important;
+  }
+}
+.frm_ajax_loading {
+  display: none;
+}

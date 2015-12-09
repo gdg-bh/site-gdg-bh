@@ -11,19 +11,19 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	define( 'DB_USER', '<insert-your-db-user>' );
 	define( 'DB_PASSWORD', '<insert-your-db-password>' );
 	define( 'DB_HOST', 'localhost' ); // Probably 'localhost'
+
+	// ========================
+	// Custom Content Directory
+	// ========================
+	define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
+	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
+
+	// ========================
+	// Site URL
+	// ========================
+	define('WP_SITEURL','http://gdgbh.org/wp');
+	define('WP_HOME','http://gdgbh.org/');
 }
-
-// ========================
-// Custom Content Directory
-// ========================
-define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
-define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
-
-// ========================
-// Site URL
-// ========================
-define('WP_SITEURL','http://gdgbh.org/wp');
-define('WP_HOME','http://gdgbh.org/');
 
 // ================================================
 // You almost certainly do not want to change these

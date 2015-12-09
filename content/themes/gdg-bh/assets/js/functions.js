@@ -10,15 +10,6 @@
     // Initialize collapse button
     $(".button-collapse").sideNav();
 
-    // Grid - Masonry
-    $('.grid-list').masonry({
-      // options...
-      itemSelector: '.grid-item',
-      columnWidth: '.grid-sizer',
-      itemSelector: '.grid-item',
-      percentPosition: true
-    });
-
     // Parallax
     $('.parallax').parallax();
 
@@ -31,9 +22,16 @@
     }() );
 
 
-    // Loading
     $( function(){
       setTimeout(function(){
+        // Grid - Masonry
+        $('.grid-list').masonry({
+          itemSelector: '.grid-item',
+          columnWidth: '.grid-sizer',
+          itemSelector: '.grid-item',
+          percentPosition: true
+        });
+        // Loading
         $('#loading').fadeOut('slow');
       }, 500);
     }() );

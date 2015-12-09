@@ -22,12 +22,14 @@
                 <?php echo '<img src="' . get_template_directory_uri() . '/assets/img/event-thumb.png" class="responsive-img circle">'; ?>
               </a>
             </div>
-            <div class="col l7 m7 s7 event-body">
+            <div class="col l7 m7 s7 event-date">
               <h4><a class="color-00" href="<?php echo $event['event_url'] ?>"><?php echo $event_date ?></a></h4>
-              <p class="superlight"><?php echo $event['name'] ?></p>
             </div>
             <div class="col l2 m2 s2 event-links">
               <a href="<?php echo $event['event_url'] ?>"><i class="ion-ios-upload-outline"></i></a>
+            </div>
+            <div class="col l9 m9 s9 event-body">
+              <p class="superlight"><?php echo $event['name'] ?></p>
             </div>
           </article>
 
@@ -39,7 +41,7 @@
         get_template_part( 'templates/alert','warning' );
       endif; ?>
 
+
     </div>
   </div>
 </section>
-

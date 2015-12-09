@@ -467,10 +467,16 @@ nav ul li.current-post-parent {
   text-align: center;
   padding: 30px 0;
 }
+.featured-events-item .event-body {
+  margin-top: -15px;
+}
+.featured-events-item .event-date {
+  margin-top: -5px;
+}
 .featured-events-item .event-links {
   font-size: 20px;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .featured-events-item .event-links a {
   color: #3e3e3e;

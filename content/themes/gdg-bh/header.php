@@ -27,7 +27,7 @@
   </style>
 
   <script src="<?php echo get_template_directory_uri() ?>/assets/hacks/respond.min.js"></script>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <?php wp_head(); ?>
 </head>
 
